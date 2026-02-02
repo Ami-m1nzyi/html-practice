@@ -1,0 +1,168 @@
+:root {
+  --bg: #07070d;
+  --card: #12121a;
+  --text: #f5f7ff;
+  --dim: #9ca3af;
+  --accent: #4ba0f0; 
+  --accent2: #7440dd; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Orbitron:wght@400..900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {  
+  display: none;
+}
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.25;
+}
+
+.bg-glow {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(0, 149, 255, 0.15),
+    transparent 60%
+  );
+  z-index: -1;
+}
+
+.header_iso {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: "Orbitron", sans-serif;
+}
+.header_iso h2 {
+  font-family: "Orbitron";
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+nav a {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--dim);
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+nav a:hover {
+  color: var(--accent);
+  background: rgba(0, 145, 255, 0.15);
+}
+.iso_info {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 8%;
+  flex-wrap: wrap;
+  padding-top: 0;
+}
+.iso_info h2 {
+  font-size: 2.6rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-family: "Orbitron", sans-serif;
+}
+.iso_info span {
+    font-family: "Jura", sans-serif;
+}
+.iso_info p {
+  color: var(--dim);
+  max-width: 420px;
+  margin-top: 20px;
+  font-family: "Jura", sans-serif;
+}
+.iso_info img {
+  max-width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 0 60px rgba(0, 238, 255, 0.355);
+  background-color: #42839f25;
+}
+
+section {
+  padding: 80px 8%;
+}
+.section-title {
+  font-family: "Orbitron";
+  color: var(--accent);
+  margin-bottom: 40px;
+  font-family: "Jura", sans-serif;
+}
+.abilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.4s;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+  border-color: var(--accent);
+}
+.card h4 {
+  color: var(--accent2);
+  margin-bottom: 10px;
+  font-family: "Orbitron", sans-serif;
+}
+.card p {
+  color: var(--dim);
+  font-size: 0.9rem;
+  font-family: "Jura", sans-serif;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.4s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--dim);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "Jura", sans-serif;
+}
