@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мини-игры</title>
+    <link rel="stylesheet" href="css/style_chamcham.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header_chamber">
+      <h2 class="logo">YOU WANT TO PLAY? LET`S PLAY!</h2>
+      <nav class="nav">
+        <a href="main.html">Home</a>
+        <a href="clove.html">Clove</a>
+        <a href="iso.html">Iso</a>
+        <a href="frieren.html">Frieren</a>
+        <a href="me.html">MEEEEE</a>
+        <a href="chamber.html">Games</a>
+      </nav>
+    </header>
+    <video autoplay muted loop class="video-bg">
+      <source
+        src="video/iyW42Ztu2iJZzI2_Chamber Valorant 4K Live Wallpaper.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <div class="bg-glow"></div>
+    <main class="container">
+      <section class="game-card" id="clicker-game">
+        <h2>Clicker</h2>
+        <p>Time remaining:<span id="timer">30</span>s</p>
+        <p>Score: <span id="score">0</span></p>
+        <p>High Score: <span id="high-score">0</span></p>
+        <button id="click-btn" class="main-btn">CLICK ME!</button>
+        <button id="reset-score" class="secondary-btn">Reset Score</button>
+      </section>
+
+      <section class="game-card" id="adventure-game">
+        <h2>Adventure Generator</h2>
+        <div class="adventure-display">
+          <p><strong>Current Adventure:</strong></p>
+          <p id="adventure-text">Click the button to start an adventure!</p>
+        </div>
+        <div class="btn-group">
+          <button id="gen-btn" class="main-btn">Generate Adventure</button>
+          <button id="clear-history" class="secondary-btn">
+            Clear History
+          </button>
+        </div>
+        <div class="history-section">
+          <h3>Adventure History:</h3>
+          <div id="adventure-history"></div>
+        </div>
+      </section>
+
+      <section class="game-card" id="guess-game">
+        <h2>Guess the Number from 1 to 100</h2>
+        <p>Attempts left: <span id="attempts-left">10</span></p>
+        <input
+          type="number"
+          id="guess-input"
+          placeholder="Enter a num"
+          min="1"
+          max="100"
+        />
+        <div class="btn-group">
+          <button id="check-btn" class="main-btn">Check</button>
+          <button id="new-game-btn" class="secondary-btn">New Game</button>
+        </div>
+        <p id="guess-message"></p>
+        <p>Record: <span id="guess-record">-</span> attempts</p>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

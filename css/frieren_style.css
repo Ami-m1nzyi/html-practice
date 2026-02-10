@@ -3,8 +3,8 @@
   --card: #171a2b;
   --text: #eef1ff;
   --dim: #b6bddb;
-  --accent: #2fb885;
-  --accent2: #51cceb;
+  --accent: #dbddc2;
+  --accent2: #beb039;
 }
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jura:wght@300..700&family=Orbitron:wght@400..900&display=swap');
 
@@ -85,7 +85,7 @@ nav a:hover {
 .frieren_info img {
   max-width: 320px;
   border-radius: 20px;
-  box-shadow: 0 0 60px rgba(252, 132, 132, 0.35);
+  box-shadow: 0 0 60px rgba(252, 246, 132, 0.35);
 }
 section {
   padding: 80px 8%;
