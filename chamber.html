@@ -32,52 +32,99 @@
     </video>
     <div class="bg-glow"></div>
     <main class="container">
-      <section class="game-card" id="clicker-game">
-        <h2>Clicker</h2>
-        <p>Time remaining:<span id="timer">30</span>s</p>
-        <p>Score: <span id="score">0</span></p>
-        <p>High Score: <span id="high-score">0</span></p>
-        <button id="click-btn" class="main-btn">CLICK ME!</button>
-        <button id="reset-score" class="secondary-btn">Reset Score</button>
-      </section>
+      <div class="colum1">
+        <section class="game-card" id="clicker-game">
+          <h2>Clicker</h2>
+          <p>Time remaining:<span id="timer">30</span>s</p>
+          <p>Score: <span id="score">0</span></p>
+          <p>High Score: <span id="high-score">0</span></p>
+          <button id="click-btn" class="main-btn">CLICK ME!</button>
+          <button id="reset-score" class="secondary-btn">Reset Score</button
+          ><br />
+          <img
+            src="img/chamber smile.jpg"
+            alt="Chamber Smiley"
+            class="chamber-smile"
+          /><br />
+          <p id="clicker-message">I count the number of your clicks</p>
+        </section>
 
-      <section class="game-card" id="adventure-game">
-        <h2>Adventure Generator</h2>
-        <div class="adventure-display">
-          <p><strong>Current Adventure:</strong></p>
-          <p id="adventure-text">Click the button to start an adventure!</p>
-        </div>
-        <div class="btn-group">
-          <button id="gen-btn" class="main-btn">Generate Adventure</button>
-          <button id="clear-history" class="secondary-btn">
-            Clear History
+        <section class="game-card" id="adventure-game">
+          <h2>Adventure Generator</h2>
+          <div class="adventure-display">
+            <p><strong>Current Adventure:</strong></p>
+            <p id="adventure-text">Click the button to start an adventure!</p>
+          </div>
+          <div class="btn-group">
+            <button id="gen-btn" class="main-btn">Generate Adventure</button>
+            <button id="clear-history" class="secondary-btn">
+              Clear History
+            </button>
+          </div>
+          <div class="history-section">
+            <h3>Adventure History:</h3>
+            <div id="adventure-history"></div>
+          </div>
+        </section>
+
+        <section class="game-card" id="guess-game">
+          <h2>Guess the Number from 1 to 100</h2>
+          <p>Attempts left: <span id="attempts-left">10</span></p>
+          <input
+            type="number"
+            id="guess-input"
+            placeholder="Enter a num"
+            min="1"
+            max="100"
+          />
+          <div class="btn-group">
+            <button id="check-btn" class="main-btn">Check</button>
+            <button id="new-game-btn" class="secondary-btn">New Game</button>
+          </div>
+          <p id="guess-message"></p>
+          <p>Record: <span id="guess-record">-</span> attempts</p>
+          <img
+            src="img/killjoy.jpg"
+            alt="Killjoy Smiley"
+            class="chamber-smile"
+          />
+          <br />
+          <p id="guess-hint">I will give you hints after each guess</p>
+        </section>
+      </div>
+
+      <div class="colum2">
+        <section class="game-card" id="reaction-game">
+          <h2>Reaction Game</h2>
+          <p>Time: <span id="time">30</span> sec</p>
+          <p>Hits: <span id="hits">0</span></p>
+          <button onclick="startReactionGame()" class="main-btn">Start</button>
+          <button onclick="resetReactionGame()" class="main-btn">Reset</button>
+
+          <div id="gameArea">
+            <button id="reactionBtn">ЖМИ!</button>
+          </div>
+
+          <p id="reactionResult"></p>
+        </section>
+
+        <section class="game-card" id="tic-tac-toe">
+          <h2>Tic Tac Toe</h2>
+          <div id="board"></div>
+          <p id="winner"></p>
+          <button onclick="resetTicTacToe()" class="main-btn">
+            Reset Game
           </button>
-        </div>
-        <div class="history-section">
-          <h3>Adventure History:</h3>
-          <div id="adventure-history"></div>
-        </div>
-      </section>
+        </section>
 
-      <section class="game-card" id="guess-game">
-        <h2>Guess the Number from 1 to 100</h2>
-        <p>Attempts left: <span id="attempts-left">10</span></p>
-        <input
-          type="number"
-          id="guess-input"
-          placeholder="Enter a num"
-          min="1"
-          max="100"
-        />
-        <div class="btn-group">
-          <button id="check-btn" class="main-btn">Check</button>
-          <button id="new-game-btn" class="secondary-btn">New Game</button>
-        </div>
-        <p id="guess-message"></p>
-        <p>Record: <span id="guess-record">-</span> attempts</p>
-      </section>
+        <section class="game-card" id="maze-game">
+          <h2>labyrinth</h2>
+          <p>Time: <span id="mazeTime">0</span> sec</p>
+          <div id="maze"></div>
+          <button onclick="resetMaze()" class="main-btn">Reset Game</button>
+        </section>
+      </div>
     </main>
-
     <script src="js/script.js"></script>
   </body>
 </html>
